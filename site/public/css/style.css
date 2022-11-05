@@ -14,7 +14,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  /* background-color: black; */
+  background-color: rgb(211, 202, 202);
 }
 
 .container {
@@ -56,7 +56,6 @@ body {
   width: fit-content;
   font-weight: 500;
   width: 80px;
-
 }
 
 .titulo img {
@@ -103,6 +102,7 @@ body {
   background-color: #e5e5e5;
   display: flex;
   flex-direction: column;
+  height: 400px;
 }
 
 .social .introducao{
@@ -144,8 +144,9 @@ body {
 /* CURIOSIDADES  */
 
 .curiosidades{
-  background-color: rgb(134, 133, 133);
+  background-color: rgb(211, 202, 202);
   margin: none;
+  margin-bottom: 30px;
 }
 
 .curiosidades .titulo_c {
@@ -164,24 +165,39 @@ body {
 .curiosidades .sobre .about_one {
   display: flex;
   font-size: 18px;
-  border: 3px solid gold;
+  /* border: 3px solid gold; */
   flex-direction: column;
   width: 50%;
-  /* height: 300px; */
+}
+
+.curiosidades .sobre .about_one p{
+  width: 80%;
+  display: flex;
+  align-self: center;
 }
 
 .curiosidades .sobre .about_two {
-  border: 3px solid blue;
+  /* border: 3px solid blue; */
+  display: flex;
+  font-size: 18px;
+  flex-direction: column;
   width: 50%;
 }
+
+.curiosidades .sobre .about_two p{
+  width: 80%;
+  display: flex;
+  align-self: center;
+}
+
 
 
 
 /* FOOTER */
 
 .footer {
-  background-color: #32b9cd;
-  height: 150px;
+  background-color: black;
+  height: 130px;
   color: #fff;
   display: flex;
   font-size: 15px;
