@@ -14,7 +14,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgb(211, 202, 202);
+  /* background-color: rgb(211, 202, 202); */
+  background-image: url(../assets/imgs/modelosnike.jpg);
+  background-size: cover;
 }
 
 .container {
@@ -66,7 +68,7 @@ body {
 
 .modelo {
   display: flex;
-  border: 3px solid green;
+  /* border: 3px solid green; */
   margin-top: 50px;
   height: 300px;
   justify-content: space-around;
@@ -74,12 +76,28 @@ body {
 
 .modelo .caixaA {
   display: flex;
-  /* border: 3px solid blue; */
   width: 20%;
   border-radius: 25px;
   background-image: url(../assets/imgs/airjordan11.png);
   background-size:contain;
   
+}
+
+.modelo .caixaB {
+  display: flex;
+  width: 20%;
+  border-radius: 25px;
+  background-image: url(../assets/imgs/airmaxplusmodelo.jpg);
+  background-size:contain;
+  
+}
+
+.modelo .caixaC {
+  display: flex;
+  width: 20%;
+  border-radius: 25px;
+  background-image: url(../assets/imgs/airforce1modelo.jpg);
+  background-size:contain;
 }
 
 .modelo .caixaA .desc1 {
@@ -91,4 +109,40 @@ body {
   width: 100%;
   border-radius: 22px 22px 0px 0px;
   color: white;
+}
+.modelo .caixaB .desc1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: black;
+  width: 100%;
+  border-radius: 22px 22px 0px 0px;
+  color: white;
+}
+.modelo .caixaC .desc1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: black;
+  width: 100%;
+  border-radius: 22px 22px 0px 0px;
+  color: white;
+}
+
+.botaoline {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+}
+
+.botaoline .botao{
+  width: 150px;
+  border-radius: 20px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
 }
