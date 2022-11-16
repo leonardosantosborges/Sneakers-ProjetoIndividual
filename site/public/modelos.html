@@ -55,16 +55,118 @@
 
     <div class="botaoline">
         <div>
-            <button class="botao">Ver sobre</button>
+            <button onclick="iniciaModal()" id="aj11" class="botao">Ver sobre</button>
         </div>
 
         <div>
-            <button class="botao">Ver sobre</button>
+            <button onclick="iniciaModal()" id="airmaxplus" class="botao">Ver sobre</button>
         </div>
 
         <div>
-            <button class="botao">Ver sobre</button>
+            <button onclick="iniciaModal()" id="airforce" class="botao">Ver sobre</button>
         </div>
     </div>
+
+    <!-- Você precisa logar -->
+
+    <div class="modelobloq">
+        <div class="logA">
+            <div class="desc1">Realize o login para visualizar.</div>
+        </div>
+
+        <div class="logB">
+            <div class="desc1">Realize o login para visualizar.</div>
+        </div>
+
+        <div class="logC">
+            <div class="desc1">Realize o login para visualizar.</div>
+        </div>
+    </div>
+
+    <div class="botaoline2">
+        <div>
+            <button onclick="iniciaModal()" id="bloq" class="botao">Ver sobre</button>
+        </div>
+
+        <div>
+            <button onclick="iniciaModal()" id="bloq2" class="botao">Ver sobre</button>
+        </div>
+
+        <div>
+            <button onclick="iniciaModal()" id="bloq3" class="botao">Ver sobre</button>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+
+    <div id="modelo" class="modal">
+
+            <div class="fechar">
+            <button id="fecharmodal" class="botaomodal">X</button>
+            </div>
+        
+            <div class="conteudo">
+            <h3>Air Jordan 11</h3>
+            
+                <div class="info">
+                
+                </div>
+            
+                <div class="fotomodal">
+                
+                </div>
+
+        </div>
+    </div>
+
+
 </body>
 </html>
+<script>
+
+    function iniciaModal(modalID) {
+        const modal = document.getElementById(modalID);
+
+        if (modal) {
+            modal.classList.add('mostrar')
+            modal.addEventListener('click', (e) => {
+                if (e.target.id == 'fecharmodal' || e.target.id == modalID) {
+                modal.classList.remove('mostrar')
+                }
+        });
+    }
+    }
+    // MODAL AJ11
+
+    const aj11 = document.getElementById('aj11')
+    aj11.addEventListener('click', () => iniciaModal('modelo'));
+    console.log(aj11)
+
+    // MODAL AIRMAX
+
+    const airmaxplus = document.getElementById('airmaxplus')
+    airmaxplus.addEventListener('click', () => iniciaModal('modelo'));
+    console.log(airmaxplus)
+
+
+    // MODAL AIR FORCE
+
+    const airforce = document.getElementById('airforce')
+    airforce.addEventListener('click', () => iniciaModal('modelo'));
+    console.log(airforce)
+
+    // MODAL BLOQ
+
+    const bloq = document.getElementById('bloq')
+    bloq.addEventListener('click', () => iniciaModal('modelo'));
+    console.log(bloq)
+
+    const bloq2 = document.getElementById('bloq2')
+    bloq2.addEventListener('click', () => iniciaModal('modelo'));
+    console.log(bloq2)
+
+    const bloq3 = document.getElementById('bloq3')
+    bloq3.addEventListener('click', () => iniciaModal('modelo'));
+    console.log(bloq3)
+
+</script>

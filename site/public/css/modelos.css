@@ -98,6 +98,7 @@ body {
   border-radius: 25px;
   background-image: url(../assets/imgs/airforce1modelo.jpg);
   background-size:contain;
+  background-position: center;
 }
 
 .modelo .caixaA .desc1 {
@@ -145,4 +146,160 @@ body {
   background-color: black;
   color: white;
   border: 2px solid white;
+  cursor: pointer;
+}
+
+/* MODEDELOS BLOQUEADOS  */
+
+.modelobloq {
+  display: flex;
+  margin-top: 50px;
+  height: 300px;
+  justify-content: space-around;
+}
+
+.modelobloq .logA {
+  display: flex;
+  width: 20%;
+  border-radius: 25px;
+  background-image: url(../assets/imgs/nophoto.png);
+  background-size:contain;
+  background-position: center;
+}
+
+.modelobloq .logB {
+  display: flex;
+  width: 20%;
+  border-radius: 25px;
+  background-image: url(../assets/imgs/nophoto.png);
+  background-size:contain;
+  background-position: center;
+}
+
+.modelobloq .logC {
+  display: flex;
+  width: 20%;
+  border-radius: 25px;
+  background-image: url(../assets/imgs/nophoto.png);
+  background-size:contain;
+  background-position: center;
+}
+
+.modelobloq .logA .desc1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: black;
+  width: 100%;
+  border-radius: 22px 22px 0px 0px;
+  color: white;
+}
+.modelobloq .logB .desc1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: black;
+  width: 100%;
+  border-radius: 22px 22px 0px 0px;
+  color: white;
+}
+.modelobloq .logC .desc1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: black;
+  width: 100%;
+  border-radius: 22px 22px 0px 0px;
+  color: white;
+}
+
+.botaoline2 {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.botaoline2 .botao{
+  width: 150px;
+  border-radius: 20px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+/* MODAL  */
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .conteudo h3 {
+  text-align: center;
+}
+
+.modal .conteudo {
+  background-color: antiquewhite;
+  width: 60vw;
+  min-width: 300px;
+  height: 70vh;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 0 10px black;
+}
+
+.modal .fechar {
+  position: absolute;
+  top:35px;
+  right: 215px;
+}
+
+.modal .fechar .botaomodal {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(247, 144, 144);
+  border: 4px solid rgb(250, 117, 117);
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+  font-size: 1.0em;
+}
+
+.mostrar {
+  display: flex;
+}
+
+
+/* Animação modal  */
+
+@keyframes modalconteudo{
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+
+  }
+}
+
+.mostrar .conteudo {
+  animation: modalconteudo .5s;
 }
