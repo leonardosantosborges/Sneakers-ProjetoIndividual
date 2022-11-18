@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos Jogar?</title>
+
+    <script src="./js/funcoes.js"></script>
+
+    <link rel="icon" href="assets/imgs/Logo.png">
+    <link rel="stylesheet" href="./css/jogo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+</head>
+<body>
+
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo"><img src="assets/imgs/Logo.png" alt="Logo"></h1>
+            <ul class="navbar">
+                <li><a href="./index.html">Sair</a></li>
+                <li>
+                    <a href="./modelos.html">Modelos</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="./poslogin.html" class="agora">Jogar</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="game-board">
+        <img src="assets/imgs/clouds.png" class="clouds" alt="">
+        <img src="assets/imgs/cypherkicks-unscreen.gif" class="mario">
+        <img src="assets/imgs/box_yzy_game-removebg-preview.png" class="pipe">
+
+    </div>
+
+</body>
+</html>
+<script>
+    const mario = document.querySelector('.mario');
+    const pipe = document.querySelector('.pipe');
+    // const clouds = document.querySelector('.clouds');
+
+
+
+    const jump = () => {
+        mario.classList.add('jump');
+
+        setTimeout(() => {
+        mario.classList.remove('jump');
+        }, 500)
+    }
+
+    const loop = setInterval(() => {
+        const pipePosition = pipe.offsetLeft;
+        // const cloudsPosition = clouds.offsetRight;
+        const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
+
+        if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
+            
+            // PARANDO ANIMAÇÃO DA CAIXA
+            pipe.style.animation = 'none';
+            pipe.style.left = `${pipePosition}px`
+
+            // PARANDO ANIMAÇÃO DO TÊNIS
+            mario.style.animation = 'none';
+            mario.style.bottom = `${marioPosition}px`
+            mario.src = 'assets/imgs/game-over.gif'
+            mario.style.width = '120px';
+            mario.style.marginLeft = '50px'
+
+            // PARANDO ANIMAÇÃO NUVENS
+            // clouds.style.animation = 'none';
+            // clouds.style.right = `${cloudsPosition}px`
+
+
+            clearInterval(loop)
+        }
+
+    }, 10)
+
+    document.addEventListener('keydown', jump);
+</script>

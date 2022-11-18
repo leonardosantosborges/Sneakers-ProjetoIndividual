@@ -249,8 +249,9 @@ body {
   align-items: center;
 }
 
-.modal .conteudo h3 {
-  text-align: center;
+.modal h3 {
+  color: white;
+  position:relative;
 }
 
 .modal .conteudo {
@@ -261,6 +262,11 @@ body {
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 0 0 10px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
 }
 
 .modal .fechar {
@@ -302,4 +308,16 @@ body {
 
 .mostrar .conteudo {
   animation: modalconteudo .5s;
+}
+
+
+.modal .conteudo .fotomodal img {
+  width: 300px;
+}
+.modal .conteudo .info {
+  width: 500px;
+  border: 3px solid green;
+  font-size:x-large;
+  
+
 }
