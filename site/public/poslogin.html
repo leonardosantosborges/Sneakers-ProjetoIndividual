@@ -19,69 +19,78 @@
         <div class="container">
             <h1 class="titulo"><img src="assets/imgs/Logo.png" alt="Logo"></h1>
             <ul class="navbar">
-                <li><a href="./index.html">Sair</a></li>
+                <li>
+                    <a href="./poslogin.html" class="agora">Jogar</a>
+                </li>
                 <li>
                     <a href="./modelos.html">Modelos</a>
                 </li>
                 <li>|</li>
-                <li>
-                    <a href="./poslogin.html" class="agora">Jogar</a>
-                </li>
+                
+                <li><a href="./index.html">Sair</a></li>
+                
             </ul>
         </div>
     </div>
 
     <div class="game-board">
-        <img src="assets/imgs/clouds.png" class="clouds" alt="">
-        <img src="assets/imgs/cypherkicks-unscreen.gif" class="mario">
-        <img src="assets/imgs/box_yzy_game-removebg-preview.png" class="pipe">
+        <div id="mostrar" class="contador"><b>SCORE:0</b></div>
 
+        <img src="assets/imgs/cypherkicks-unscreen.gif" class="tenis">
+        <img src="assets/imgs/box_yzy_game-removebg-preview.png" class="pipe">
+        
     </div>
 
+    <div class="containerbot">
+        <div class="containerrec"><button onclick="recomecar()" class="botaorec">Recomeçar</button></div>
+    </div>
+    
 </body>
 </html>
 <script>
-    const mario = document.querySelector('.mario');
+    var cont = 0;
+    const tenis = document.querySelector('.tenis');
     const pipe = document.querySelector('.pipe');
-    // const clouds = document.querySelector('.clouds');
-
-
-
+    
     const jump = () => {
-        mario.classList.add('jump');
-
+        tenis.classList.add('jump');
+        
         setTimeout(() => {
-        mario.classList.remove('jump');
+            tenis.classList.remove('jump');
         }, 500)
     }
-
+    
     const loop = setInterval(() => {
         const pipePosition = pipe.offsetLeft;
-        // const cloudsPosition = clouds.offsetRight;
-        const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
-
-        if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
+        const pipePositionRight = pipe.offsetRight;
+        
+        const tenisPosition = +window.getComputedStyle(tenis).bottom.replace('px', '');
+        
+        if (pipePosition <= 120 && pipePosition > 0 && tenisPosition < 60) {
             
             // PARANDO ANIMAÇÃO DA CAIXA
             pipe.style.animation = 'none';
             pipe.style.left = `${pipePosition}px`
-
+            
             // PARANDO ANIMAÇÃO DO TÊNIS
-            mario.style.animation = 'none';
-            mario.style.bottom = `${marioPosition}px`
-            mario.src = 'assets/imgs/game-over.gif'
-            mario.style.width = '120px';
-            mario.style.marginLeft = '50px'
-
-            // PARANDO ANIMAÇÃO NUVENS
-            // clouds.style.animation = 'none';
-            // clouds.style.right = `${cloudsPosition}px`
-
-
-            clearInterval(loop)
+            tenis.style.animation = 'none';
+            tenis.style.bottom = `${tenisPosition}px`
+            tenis.src = 'assets/imgs/game-over.gif'
+            tenis.style.width = '120px';
+            
+            clearInterval(loop);
+        } 
+        else if (tenisPosition >= 60){
+            cont++;
+            
+            mostrar.innerHTML = `<b> SCORE:${(cont/28).toFixed(0)}</b>`;  
         }
-
+        
     }, 10)
 
     document.addEventListener('keydown', jump);
+
+    function recomecar() {
+        window.location.reload();
+    }
 </script>

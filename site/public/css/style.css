@@ -71,6 +71,7 @@ body {
   color: #050518;
   background-image: url(".././assets/imgs/airmaxplusbanner.jpg");
   background-size: cover;
+  height: 500px;
 }
 
 .banner .container {
