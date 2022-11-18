@@ -15,11 +15,11 @@ body {
   padding: 0;
   font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   /* background-color: rgb(211, 202, 202); */
-  background-image: url(../assets/imgs/modelosnike.jpg);
+  background-image: url(../assets/imgs/prateleira.jpg);
   background-size: cover;
 }
 
-.container {
+.container_login {
   width: 80%;
   margin: auto;
   display: flex;
@@ -30,7 +30,7 @@ body {
   background-color: black;
 }
 
-.header .container {
+.header .container_login {
   justify-content: space-between;
 }
 
@@ -64,103 +64,109 @@ body {
   width: 80px;
 }
 
-/* FIM DA HEADER */
+/* LOGIN */
+.container{
+  height: 530px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .banner .container .card {
-    background-color: #e5e5e5;
-    height: fit-content;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    color: palevioletred;
-    align-items: center;
-    border-radius: 4px;
-  }
-  
-  .card {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .card h2 {
-    font-size: 30px;
-  }
-  
-  .card h4 {
-    font-size: 16px;
-  }
-  
-  .banner #div_erros_login {
-    margin-top: 15px;
-  }
-  
-  button {
-    cursor: pointer;
-  }
-  
-  /* FORMULARIO */
-  
-  .alerta_erro{
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .card_erro {
-    display: none;
-    background-color: #fff;
-    color: black;
-    width: 230px;
-    position: fixed;
-    border-radius: 4px;
-    border: #e6005a 3px solid;
-    padding: 10px;
-    margin-right: 10%;
-  }
-  
-  .card_erro #mensagem_erro{
-    font-weight: 500;
-    font-size: 20px;
-  }
-  
-  .formulario .tipo_campo {
-    font-size: 20px;
-    font-weight: 600 !important;
-  }
-  
-  .formulario {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  input {
-    margin-bottom: 10px;
-    border: 2px solid #32b9cd;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-  }
-  
-  .btn {
-    font-family: "Barlow", sans-serif;
-    border: 0;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 10px 15px;
-    color: white;
-    background-color: #e6005a;
-    width: 120px;
-    align-self: center;
-    margin-top: 5px;
-  }
-  
-  .loading-div {
-    width: 50px;
-    margin: auto;
-    display: none;
-  }
-  
-  .loading-div img {
-    height: 50px;
-    width: 50px;
-  }
+  background-color: #e5e5e5;
+  height: fit-content;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card h2 {
+  font-size: 30px;
+}
+
+.card h4 {
+  font-size: 16px;
+}
+
+.banner #div_erros_login {
+  margin-top: 15px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* FORMULARIO */
+
+.alerta_erro{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card_erro {
+  display: none;
+  background-color: #fff;
+  color: black;
+  width: 230px;
+  position: fixed;
+  border-radius: 4px;
+  border: black 3px solid;
+  padding: 10px;
+  margin-right: 10%;
+}
+
+.card_erro #mensagem_erro{
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.formulario .tipo_campo {
+  font-size: 20px;
+  font-weight: 600 !important;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 10px;
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.btn {
+  font-family: "Barlow", sans-serif;
+  border: 3px solid white;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: white;
+  background-color: black;
+  width: 120px;
+  align-self: center;
+  margin-top: 5px;
+}
+
+.loading-div {
+  width: 50px;
+  margin: auto;
+  display: none;
+}
+
+.loading-div img {
+  height: 50px;
+  width: 50px;
+}
