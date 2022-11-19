@@ -15,7 +15,7 @@ body {
   padding: 0;
   font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   /* background-color: rgb(211, 202, 202); */
-  background-image: url(../assets/imgs/alotAJ.jpg);
+  background-image: url(../assets/imgs/prateleira.jpg);
   background-size: cover;
 }
 
@@ -64,13 +64,16 @@ body {
   width: 80px;
 }
 
-/* LOGIN */
-.container{
-  height: 530px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* CADASTRO */
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 530px;
 }
+
+/* LOGIN */
 
 .banner .container .card {
   background-color: #e5e5e5;
