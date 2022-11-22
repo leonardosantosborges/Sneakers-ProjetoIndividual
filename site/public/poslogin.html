@@ -49,6 +49,7 @@
 </html>
 <script>
     var cont = 0;
+    var contFinal = 0;
     const tenis = document.querySelector('.tenis');
     const pipe = document.querySelector('.pipe');
     
@@ -67,7 +68,9 @@
         const tenisPosition = +window.getComputedStyle(tenis).bottom.replace('px', '');
         
         if (pipePosition <= 120 && pipePosition > 0 && tenisPosition < 60) {
-            
+            contFinal = (cont/28).toFixed(0);
+            // console.log(contFinal);
+
             // PARANDO ANIMAÇÃO DA CAIXA
             pipe.style.animation = 'none';
             pipe.style.left = `${pipePosition}px`

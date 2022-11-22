@@ -103,7 +103,7 @@
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
 
-        fetch("/PESSOAs/autenticar", {
+        fetch("/usuarios/autenticar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -119,12 +119,12 @@
                 console.log(resposta);
 
                 resposta.json().then(json => {
-                    console.log(json);
+                    console.log("JSON LOGIN ",json);
                     console.log(JSON.stringify(json));
 
-                    sessionStorage.EMAIL_PESSOA = json.email;
-                    sessionStorage.NOME_PESSOA = json.nome;
-                    sessionStorage.ID_PESSOA = json.id;
+                    sessionStorage.EMAIL_PESSOA = json.Email;
+                    sessionStorage.NOME_PESSOA = json.Nome;
+                    sessionStorage.ID_PESSOA = json.idPessoa;
 
                     // REDIRECIONANDO 
                     setTimeout(function () {
@@ -137,7 +137,7 @@
 
                 console.log("Houve um erro ao tentar realizar o login!");
 
-                resposta.text().then(texto => {
+                resposta.then(texto => {
                     console.error(texto);
                     finalizarAguardar(texto);
                 });
