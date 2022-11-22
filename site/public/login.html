@@ -103,7 +103,7 @@
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
 
-        fetch("/usuarios/autenticar", {
+        fetch("/PESSOAs/autenticar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -122,13 +122,13 @@
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.EMAIL_PESSOA = json.email;
+                    sessionStorage.NOME_PESSOA = json.nome;
+                    sessionStorage.ID_PESSOA = json.id;
 
                     // REDIRECIONANDO 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "poslogin.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
