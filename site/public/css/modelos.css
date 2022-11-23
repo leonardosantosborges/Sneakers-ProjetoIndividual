@@ -249,24 +249,18 @@ body {
   align-items: center;
 }
 
-.modal h3 {
-  color: white;
-  position:relative;
-}
-
 .modal .conteudo {
   background-color: antiquewhite;
-  width: 60vw;
+  width: 70%;
   min-width: 300px;
-  height: 70vh;
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 0 0 10px black;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  text-align: center;
-
+  flex-direction: column;
+  animation: modalconteudo .5s;
 }
 
 .modal .fechar {
@@ -306,18 +300,30 @@ body {
   }
 }
 
-.mostrar .conteudo {
-  animation: modalconteudo .5s;
-}
-
-
 .modal .conteudo .fotomodal img {
   width: 300px;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 .modal .conteudo .info {
   width: 500px;
-  border: 3px solid green;
+  /* border: 3px solid green; */
   font-size:x-large;
-  
+}
 
+.mostrar .info {
+  text-align:justify;
+  width: 200px;
+}
+
+.conteudo .sobre{
+display: flex;
+justify-content: space-around;
+width: 900px;
+/* border: 3px solid green; */
+}
+
+.conteudo .sobre .info {
+  display: flex;
+  /* align-items: center; */
 }

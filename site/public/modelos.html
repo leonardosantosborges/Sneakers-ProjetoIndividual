@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +18,7 @@
         rel="stylesheet"> -->
 
 </head>
+
 <body>
     <div class="header">
         <div class="container">
@@ -98,26 +100,109 @@
 
     <div id="modelo" class="modal">
 
-            <div class="fechar">
+        <div class="fechar">
             <button id="fecharmodal" class="botaomodal">X</button>
-            </div>
-            <h3>Air Jordan 11</h3>
-            
-            <div class="conteudo">
-            
-                <div class="fotomodal">
+        </div>
+
+        
+        <div class="conteudo">
+
+            <h1>Air Jordan 11</h1>
+
+        <div class="sobre">
+
+            <div class="fotomodal">
                 <img src="assets/imgs/airjordan11.png" alt="Air Jordan 11">
-                </div>
+            </div>
 
-                <div class="info">
-                    Seu lançamento aconteceu em 1995 e o tênis foi usado pelo famoso JUMPMAN durante toda a temporada, até o final de 1996. Na época, JORDAN jogava no CHICAGO BULLS e esse intervalo de tempo é considerado, até hoje, como “o grande retorno” do jogador às quadras.
-                </div>
+            <div class="info">
+                Seu lançamento aconteceu em 1995 e o tênis foi usado pelo famoso JUMPMAN durante toda a temporada, até o
+                final de 1996. Na época, JORDAN jogava no CHICAGO BULLS e esse intervalo de tempo é considerado, até
+                hoje, como “o grande retorno” do jogador às quadras.
+            </div>
 
+        </div>
+
+        </div>
+    </div>
+
+    <!-- AIR MAX PLUS -->
+
+    <div id="airmax" class="modal">
+
+        <div class="fechar">
+            <button id="fecharmodal" class="botaomodal">X</button>
+        </div>
+        
+        <div class="conteudo">
+            <h1>Air Max Plus</h1>
+
+        <div class="sobre">   
+            <div class="fotomodal">
+                <img src="assets/imgs/airmaxplusmodelo.jpg" alt="Air Max Plus">
+            </div>
+
+            <div class="info">
+                Em 1997, um dos maiores nomes da Nike era só um designer iniciante. Quando ouviu o nome do projeto, ele lembrou de alguns desenhos que fez durante umas férias na Flórida enquanto admirava o pôr do sol. Essa memória originou a criação do Nike Air Max Plus.
+            </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <!-- AIR FORCE -->
+
+    <div id="af1" class="modal">
+
+        <div class="fechar">
+            <button id="fecharmodal" class="botaomodal">X</button>
+        </div>
+        
+        <div class="conteudo">
+            <h1>Air Force One</h1>
+        
+        <div class="sobre">   
+            <div class="fotomodal">
+                <img src="assets/imgs/airforce1modelo.jpg" alt="Air Force 1">
+            </div>
+
+            <div class="info">
+                Seu lançamento aconteceu em 1995 e o tênis foi usado pelo famoso JUMPMAN durante toda a temporada, até o
+                final de 1996. Na época, JORDAN jogava no CHICAGO BULLS e esse intervalo de tempo é considerado, até
+                hoje, como “o grande retorno” do jogador às quadras.
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- MODELOBLOQ -->
+
+    <div id="modelobloq" class="modal">
+
+        <div class="fechar">
+            <button id="fecharmodal" class="botaomodal">X</button>
+        </div>
+        
+        <div class="conteudo">
+            <h3>?????</h3>
+
+        <div class="sobre">   
+            <div class="fotomodal">
+                <img src="assets/imgs/nophoto.png" alt="Modelo Bloqueado">
+            </div>
+
+            <div class="info">
+                Realize seu login ou cadastro para descobrir o modelo.
+            </div>
+        </div>
+        
         </div>
     </div>
 
 
 </body>
+
 </html>
 <script>
 
@@ -128,10 +213,10 @@
             modal.classList.add('mostrar')
             modal.addEventListener('click', (e) => {
                 if (e.target.id == 'fecharmodal' || e.target.id == modalID) {
-                modal.classList.remove('mostrar')
+                    modal.classList.remove('mostrar')
                 }
-        });
-    }
+            });
+        }
     }
     // MODAL AJ11
 
@@ -142,28 +227,28 @@
     // MODAL AIRMAX
 
     const airmaxplus = document.getElementById('airmaxplus')
-    airmaxplus.addEventListener('click', () => iniciaModal('modelo'));
+    airmaxplus.addEventListener('click', () => iniciaModal('airmax'));
     console.log(airmaxplus)
 
 
     // MODAL AIR FORCE
 
     const airforce = document.getElementById('airforce')
-    airforce.addEventListener('click', () => iniciaModal('modelo'));
+    airforce.addEventListener('click', () => iniciaModal('af1'));
     console.log(airforce)
 
     // MODAL BLOQ
 
     const bloq = document.getElementById('bloq')
-    bloq.addEventListener('click', () => iniciaModal('modelo'));
+    bloq.addEventListener('click', () => iniciaModal('modelobloq'));
     console.log(bloq)
 
     const bloq2 = document.getElementById('bloq2')
-    bloq2.addEventListener('click', () => iniciaModal('modelo'));
+    bloq2.addEventListener('click', () => iniciaModal('modelobloq'));
     console.log(bloq2)
 
     const bloq3 = document.getElementById('bloq3')
-    bloq3.addEventListener('click', () => iniciaModal('modelo'));
+    bloq3.addEventListener('click', () => iniciaModal('modelobloq'));
     console.log(bloq3)
 
 </script>
