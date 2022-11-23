@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
 </head>
+
 <body>
 
     <div class="header">
@@ -26,9 +28,9 @@
                     <a href="./modelos.html">Modelos</a>
                 </li>
                 <li>|</li>
-                
+
                 <li><a href="./index.html">Sair</a></li>
-                
+
             </ul>
         </div>
     </div>
@@ -38,62 +40,104 @@
 
         <img src="assets/imgs/cypherkicks-unscreen.gif" class="tenis">
         <img src="assets/imgs/box_yzy_game-removebg-preview.png" class="pipe">
-        
+
     </div>
 
     <div class="containerbot">
         <div class="containerrec"><button onclick="recomecar()" class="botaorec">Recomeçar</button></div>
     </div>
-    
+
 </body>
+
 </html>
 <script>
+
+
     var cont = 0;
     var contFinal = 0;
     const tenis = document.querySelector('.tenis');
     const pipe = document.querySelector('.pipe');
-    
+
     const jump = () => {
         tenis.classList.add('jump');
-        
+
         setTimeout(() => {
             tenis.classList.remove('jump');
         }, 500)
     }
-    
+
     const loop = setInterval(() => {
         const pipePosition = pipe.offsetLeft;
         const pipePositionRight = pipe.offsetRight;
-        
+
         const tenisPosition = +window.getComputedStyle(tenis).bottom.replace('px', '');
-        
+
         if (pipePosition <= 120 && pipePosition > 0 && tenisPosition < 60) {
-            contFinal = (cont/28).toFixed(0);
+            contFinal = (cont / 28).toFixed(0);
             // console.log(contFinal);
 
             // PARANDO ANIMAÇÃO DA CAIXA
             pipe.style.animation = 'none';
             pipe.style.left = `${pipePosition}px`
-            
+
             // PARANDO ANIMAÇÃO DO TÊNIS
             tenis.style.animation = 'none';
             tenis.style.bottom = `${tenisPosition}px`
             tenis.src = 'assets/imgs/game-over.gif'
             tenis.style.width = '120px';
-            
+
+            sessionStorage.Pontos = contFinal;
+
             clearInterval(loop);
-        } 
-        else if (tenisPosition >= 60){
+            
+            registrarPontos(contFinal)
+        }
+        else if (tenisPosition >= 60) {
             cont++;
             
-            mostrar.innerHTML = `<b> SCORE:${(cont/28).toFixed(0)}</b>`;  
+            mostrar.innerHTML = `<b> SCORE:${(cont / 28).toFixed(0)}</b>`;
+            
         }
-        
+
     }, 10)
 
     document.addEventListener('keydown', jump);
 
     function recomecar() {
         window.location.reload();
+    }
+
+
+    function registrarPontos(contFinal) {
+        // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var FkPessoa = sessionStorage.ID_PESSOA
+
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/registrarPontos", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                pontosServer: contFinal,
+                FkPessoaServer: FkPessoa
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+        return false;
     }
 </script>
