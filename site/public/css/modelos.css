@@ -149,7 +149,74 @@ body {
   cursor: pointer;
 }
 
-/* MODEDELOS BLOQUEADOS  */
+/* MODELOS LIBERADOS */
+
+.modelobloqliberado {
+  display: flex;
+  margin-top: 50px;
+  height: 300px;
+  justify-content: space-around;
+}
+
+.modelobloqliberado .loglibA {
+  display: flex;
+  width: 20%;
+  border-radius: 25px;
+  background-image: url(../assets/imgs/Tenis-Nike-Air-Max-97-Masculino.jpg);
+  background-size:contain;
+  background-position: center;
+}
+
+.modelobloqliberado .loglibB {
+  display: flex;
+  width: 20%;
+  border-radius: 25px;
+  background-image: url(../assets/imgs/tenis_adidas_yeezy_700_wave_runn.jpg);
+  background-size:contain;
+  background-position: center;
+}
+
+.modelobloqliberado .loglibC {
+  display: flex;
+  width: 20%;
+  border-radius: 25px;
+  background-image: url(../assets/imgs/13107_mizuno-wave-prophecy-ls-de.jpg);
+  background-size:contain;
+  background-position: center;
+}
+
+.modelobloqliberado .loglibA .desc1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: black;
+  width: 100%;
+  border-radius: 22px 22px 0px 0px;
+  color: white;
+}
+.modelobloqliberado .loglibB .desc1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: black;
+  width: 100%;
+  border-radius: 22px 22px 0px 0px;
+  color: white;
+}
+.modelobloqliberado .loglibC .desc1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: black;
+  width: 100%;
+  border-radius: 22px 22px 0px 0px;
+  color: white;
+}
+
+/* MODELOS BLOQUEADOS  */
 
 .modelobloq {
   display: flex;

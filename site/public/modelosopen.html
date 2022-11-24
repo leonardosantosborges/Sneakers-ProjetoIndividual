@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNKRS | Modelos</title>
+
+    <script src="./js/funcoes.js"></script>
+
+    <link rel="icon" href="assets/imgs/Logo.png">
+    <link rel="stylesheet" href="./css/modelos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"> -->
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo"><img src="assets/imgs/Logo.png" alt="Logo"></h1>
+            <ul class="navbar">
+                <li>
+                    <a href="./poslogin.html">Jogar</a>
+                </li>
+                <li>
+                    <a href="./modelosopen.html" class="agora">Modelos</a>
+                </li>
+                <li>|</li>
+
+                <li><a href="./index.html">Sair</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="modelo">
+        <div class="caixaA">
+            <div class="desc1">Air Jordan 11</div>
+        </div>
+        <div class="caixaB">
+            <div class="desc1">Air Max Plus</div>
+        </div>
+        <div class="caixaC">
+            <div class="desc1">Air Force One</div>
+        </div>
+    </div>
+
+    <div class="botaoline">
+        <div>
+            <button onclick="iniciaModal()" id="aj11" class="botao">Ver sobre</button>
+        </div>
+
+        <div>
+            <button onclick="iniciaModal()" id="airmaxplus" class="botao">Ver sobre</button>
+        </div>
+
+        <div>
+            <button onclick="iniciaModal()" id="airforce" class="botao">Ver sobre</button>
+        </div>
+    </div>
+
+    <!-- Você precisa logar -->
+
+    <div class="modelobloqliberado">
+        <div class="loglibA">
+            <div class="desc1">Air Max 97</div>
+        </div>
+
+        <div class="loglibB">
+            <div class="desc1">Adidas Microbounce</div>
+        </div>
+
+        <div class="loglibC">
+            <div class="desc1">Mizuno Desert</div>
+        </div>
+    </div>
+
+    <div class="botaoline2">
+        <div>
+            <button onclick="iniciaModal()" id="tenisairmax97" class="botao">Ver sobre</button>
+        </div>
+
+        <div>
+            <button onclick="iniciaModal()" id="tenismicrobounce" class="botao">Ver sobre</button>
+        </div>
+
+        <div>
+            <button onclick="iniciaModal()" id="tenisdesert" class="botao">Ver sobre</button>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+
+    <div id="modelo" class="modal">
+
+        <div class="fechar">
+            <button id="fecharmodal" class="botaomodal">X</button>
+        </div>
+
+
+        <div class="conteudo">
+
+            <h1>Air Jordan 11</h1>
+
+            <div class="sobre">
+
+                <div class="fotomodal">
+                    <img src="assets/imgs/airjordan11.png" alt="Air Jordan 11">
+                </div>
+
+                <div class="info">
+                    Seu lançamento aconteceu em 1995 e o tênis foi usado pelo famoso JUMPMAN durante toda a temporada,
+                    até o
+                    final de 1996. Na época, JORDAN jogava no CHICAGO BULLS e esse intervalo de tempo é considerado, até
+                    hoje, como “o grande retorno” do jogador às quadras.
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- AIR MAX PLUS -->
+
+    <div id="airmax" class="modal">
+
+        <div class="fechar">
+            <button id="fecharmodal" class="botaomodal">X</button>
+        </div>
+
+        <div class="conteudo">
+            <h1>Air Max Plus</h1>
+
+            <div class="sobre">
+                <div class="fotomodal">
+                    <img src="assets/imgs/airmaxplusmodelo.jpg" alt="Air Max Plus">
+                </div>
+
+                <div class="info">
+                    Em 1997, um dos maiores nomes da Nike era só um designer iniciante. Quando ouviu o nome do projeto,
+                    ele lembrou de alguns desenhos que fez durante umas férias na Flórida enquanto admirava o pôr do
+                    sol. Essa memória originou a criação do Nike Air Max Plus.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- AIR FORCE -->
+
+    <div id="af1" class="modal">
+
+        <div class="fechar">
+            <button id="fecharmodal" class="botaomodal">X</button>
+        </div>
+
+        <div class="conteudo">
+            <h1>Air Force One</h1>
+
+            <div class="sobre">
+                <div class="fotomodal">
+                    <img src="assets/imgs/airforce1modelo.jpg" alt="Air Force 1">
+                </div>
+
+                <div class="info">
+                    O modelo foi lançado em 1982 como artigo de basquete e caiu no gosto da cultura popular. Nas
+                    prateleiras desde 1982, o Nike Air Force 1 nasceu como uma edição limitada de tênis de basquete, mas
+                    o modelo caiu no gosto da cultura popular, elevando o calçado ao status de clássico.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODELOBLOQ -->
+
+    <div id="modelobloq" class="modal">
+
+        <div class="fechar">
+            <button id="fecharmodal" class="botaomodal">X</button>
+        </div>
+
+        <div class="conteudo">
+            <h3>Air Max 97</h3>
+
+            <div class="sobre">
+                <div class="fotomodal">
+                    <img src="assets/imgs/Tenis-Nike-Air-Max-97-Masculino.jpg" alt="Air Max 97">
+                </div>
+
+                <div class="info">
+                    Realize seu login ou cadastro para descobrir o modelo.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- AIR MAX 97 -->
+
+    <div id="airmax97" class="modal">
+
+        <div class="fechar">
+            <button id="fecharmodal" class="botaomodal">X</button>
+        </div>
+
+        <div class="conteudo">
+            <h3>Air Max 97</h3>
+
+            <div class="sobre">
+                <div class="fotomodal">
+                    <img src="assets/imgs/Tenis-Nike-Air-Max-97-Masculino.jpg" alt="Air Max 97">
+                </div>
+
+                <div class="info">
+                    O Air Max 97 foi inspirado pelo trem bala do Japão, mas o que poucos sabem, é que na verdade a maior inspiração para esse tênis veio de uma gota d'água caindo em uma lagoa. No momento em que a gota toca a lagoa, ela forma uma ondulação ao seu redor, é essa ondulação que é representada pelos traços laterais que começam de um lado, passam pelo toebox e seguem para o outro lado. Inclusive, é por isso que o swoosh na língua fica dentro de uma "gota".
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MICROBOUNCE  -->
+
+    <div id="microbounce" class="modal">
+
+        <div class="fechar">
+            <button id="fecharmodal" class="botaomodal">X</button>
+        </div>
+
+        <div class="conteudo">
+            <h3>Adidas Microbounce</h3>
+
+            <div class="sobre">
+                <div class="fotomodal">
+                    <img src="assets/imgs/tenis_adidas_yeezy_700_wave_runn.jpg" alt="Adidas Micro Bounce">
+                </div>
+
+                <div class="info">
+                    O MICROBOUNCE T1 nasceu na primeira metade dos anos 2000, quando imperavam os calçados com tecnologia visível e os solados dotados dos amortecimentos suspensos. No seu retorno, os aspectos mais tecnológicos dão espaço a uma mensagem leve, que enfatiza “o retorno da negatividade em forma de diversão”, fazendo uma alusão ao sorriso que marcou o logo da tecnologia BOUNCE, usada em diversos modelos da ADIDAS.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- DESERT  -->
+
+    <div id="desert" class="modal">
+
+        <div class="fechar">
+            <button id="fecharmodal" class="botaomodal">X</button>
+        </div>
+
+        <div class="conteudo">
+            <h3>Adidas Microbounce</h3>
+
+            <div class="sobre">
+                <div class="fotomodal">
+                    <img src="assets/imgs/13107_mizuno-wave-prophecy-ls-de.jpg" alt="Mizuno LS">
+                </div>
+
+                <div class="info">
+                    Sua primeira versão foi lançada em 2011, após sete anos de longas pesquisas e o envolvimento de uma equipe multidisciplinar. O objetivo da marca era quebrar paradigmas ao trazer um novo conceito de produto para o mercado. Anos depois, a marca chegou à décima edição com um produto de alta tecnologia, design, conforto e durabilidade, pontos importantes para quem procura um tênis de qualidade, seja pensando em performance ou uso no dia a dia.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+
+    function iniciaModal(modalID) {
+        const modal = document.getElementById(modalID);
+
+        if (modal) {
+            modal.classList.add('mostrar')
+            modal.addEventListener('click', (e) => {
+                if (e.target.id == 'fecharmodal' || e.target.id == modalID) {
+                    modal.classList.remove('mostrar')
+                }
+            });
+        }
+    }
+    // MODAL AJ11
+
+    const aj11 = document.getElementById('aj11')
+    aj11.addEventListener('click', () => iniciaModal('modelo'));
+    console.log(aj11)
+
+    // MODAL AIRMAX
+
+    const airmaxplus = document.getElementById('airmaxplus')
+    airmaxplus.addEventListener('click', () => iniciaModal('airmax'));
+    console.log(airmaxplus)
+
+
+    // MODAL AIR FORCE
+
+    const airforce = document.getElementById('airforce')
+    airforce.addEventListener('click', () => iniciaModal('af1'));
+    console.log(airforce)
+
+    // MODAL BLOQ
+
+    // const bloq = document.getElementById('bloq')
+    // bloq.addEventListener('click', () => iniciaModal('modelobloq'));
+    // console.log(bloq)
+
+    // const bloq2 = document.getElementById('bloq2')
+    // bloq2.addEventListener('click', () => iniciaModal('modelobloq'));
+    // console.log(bloq2)
+
+    // const bloq3 = document.getElementById('bloq3')
+    // bloq3.addEventListener('click', () => iniciaModal('modelobloq'));
+    // console.log(bloq3)
+
+
+
+    // MODAL AIR MAX 97
+
+    const tenisairmax97 = document.getElementById('tenisairmax97')
+    tenisairmax97.addEventListener('click', () => iniciaModal('airmax97'));
+    console.log(tenisairmax97)
+
+    // MODAL MICROBOUNCE 
+
+    const tenismicrobounce = document.getElementById('tenismicrobounce')
+    tenismicrobounce.addEventListener('click', () => iniciaModal('microbounce'));
+    console.log(tenismicrobounce)
+
+    // MODAL DESERT
+
+    const tenisdesert = document.getElementById('tenisdesert')
+    tenisdesert.addEventListener('click', () => iniciaModal('desert'));
+    console.log(tenisdesert)
+
+
+</script>
