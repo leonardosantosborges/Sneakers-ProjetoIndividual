@@ -46,7 +46,8 @@
     <div class="containerbot">
         <div class="botoes">
             <div class="containerrec"><button onclick="recomecar()" class="botaorec">Recomeçar</button></div>
-            <div class="containerrec"><button onclick="iniciaModal()" id="ranking" class="botaorec">Ranking</button></div>
+            <div class="containerrec"><button onclick="iniciaModal()" id="ranking" class="botaorec">Ranking</button>
+            </div>
         </div>
     </div>
 
@@ -57,18 +58,18 @@
         <div class="fechar">
             <button id="fecharmodal" class="botaomodal">X</button>
         </div>
-        
+
         <div class="conteudo">
             <h3>Ranking</h3>
 
-            <div class="info">
-                **********
+            <div id="mostrarranking" class="info">
+                
             </div>
         </div>
-        
-        </div>
+
     </div>
- 
+    </div>
+
 </body>
 
 </html>
@@ -111,14 +112,14 @@
             sessionStorage.Pontos = contFinal;
 
             clearInterval(loop);
-            
-            registrarPontos(contFinal)
+
+            registrarPontos(contFinal);
         }
         else if (tenisPosition >= 60) {
             cont++;
-            
+
             mostrar.innerHTML = `<b> SCORE:${(cont / 28).toFixed(0)}</b>`;
-            
+
         }
 
     }, 10)
@@ -160,10 +161,12 @@
             // finalizarAguardar();
         });
 
-        return false;
+        // return false;
     }
 
     function iniciaModal(modalID) {
+        puxardados()
+
         const modal = document.getElementById(modalID);
 
         if (modal) {
@@ -179,6 +182,30 @@
     ranking.addEventListener('click', () => iniciaModal('rankingver'));
     console.log(ranking);
 
-    
-    
+        // PUXAR RANKING BD 
+
+        function puxardados() {
+            fetch("/usuarios/ranking", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            }).then(resposta => {
+                mostrarranking.innerHTML = ``;
+
+                console.log("resposta: ", resposta);
+                resposta.json().then(json => {
+                console.log(JSON.stringify(json));
+                for (let i = 0; i <= 4; i++) {
+                    mostrarranking.innerHTML += `<b>${i+1}º  ${json[i].Nome} ${json[i].Pontuacao}</b><br>`
+                }
+            
+        })  
+
+        }).catch(function (error) {
+            console.log("#ERRo" ,error);
+        });
+
+    }
+
 </script>

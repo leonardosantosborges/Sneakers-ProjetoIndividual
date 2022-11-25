@@ -24,4 +24,8 @@ router.post("/registrarPontos", function (req, res) {
     usuarioController.registrarPontos(req, res);
 });
 
+router.get("/ranking", function (req, res) {
+    usuarioController.ranking(req, res);
+});
+
 module.exports = router;
