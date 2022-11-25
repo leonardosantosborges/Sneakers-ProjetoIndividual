@@ -44,9 +44,31 @@
     </div>
 
     <div class="containerbot">
-        <div class="containerrec"><button onclick="recomecar()" class="botaorec">Recomeçar</button></div>
+        <div class="botoes">
+            <div class="containerrec"><button onclick="recomecar()" class="botaorec">Recomeçar</button></div>
+            <div class="containerrec"><button onclick="iniciaModal()" id="ranking" class="botaorec">Ranking</button></div>
+        </div>
     </div>
 
+    <!-- MODAL -->
+
+    <div id="rankingver" class="modal">
+
+        <div class="fechar">
+            <button id="fecharmodal" class="botaomodal">X</button>
+        </div>
+        
+        <div class="conteudo">
+            <h3>Ranking</h3>
+
+            <div class="info">
+                **********
+            </div>
+        </div>
+        
+        </div>
+    </div>
+ 
 </body>
 
 </html>
@@ -140,4 +162,23 @@
 
         return false;
     }
+
+    function iniciaModal(modalID) {
+        const modal = document.getElementById(modalID);
+
+        if (modal) {
+            modal.classList.add('mostrar')
+            modal.addEventListener('click', (e) => {
+                if (e.target.id == 'fecharmodal' || e.target.id == modalID) {
+                    modal.classList.remove('mostrar')
+                }
+            });
+        }
+    }
+    const ranking = document.getElementById('ranking')
+    ranking.addEventListener('click', () => iniciaModal('rankingver'));
+    console.log(ranking);
+
+    
+    
 </script>

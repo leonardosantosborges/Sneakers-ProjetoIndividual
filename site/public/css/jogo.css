@@ -120,6 +120,11 @@ body {
     align-items: center;
     justify-content: center;
 }
+.containerbot .botoes {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
 .botaorec {
     background-color: black;
     color: white;
@@ -128,6 +133,56 @@ body {
     height: 30px;
     cursor: pointer ;
 }
+
+ /* MODAL */
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal .conteudo {
+    background-color: antiquewhite;
+    width: 70%;
+    min-width: 300px;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 0 10px black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    animation: modalconteudo .5s;
+  }
+  
+  .modal .fechar {
+    position: absolute;
+    top:35px;
+    right: 215px;
+  }
+  
+  .modal .fechar .botaomodal {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(247, 144, 144);
+    border: 4px solid rgb(250, 117, 117);
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+    font-size: 1.0em;
+  }
+  
+  .mostrar {
+    display: flex;
+  }
 
 @keyframes pipe-animation {
     from{
