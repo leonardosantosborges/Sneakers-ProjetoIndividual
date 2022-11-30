@@ -64,6 +64,28 @@ body {
   width: 80px;
 }
 
+/* OBSERVAÇÃO */
+
+.obs{
+  width: 100%;
+  /* border: 3px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5) ;
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 130px;
+}
+
+.obs .texto {
+  font-size: large;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
 /* MODELOS */
 
 .modelo {
@@ -330,13 +352,13 @@ body {
   animation: modalconteudo .5s;
 }
 
-.modal .fechar {
-  position: absolute;
-  top:35px;
-  right: 215px;
+.conteudo .fechar {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
-.modal .fechar .botaomodal {
+.conteudo .fechar .botaomodal {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -393,4 +415,27 @@ width: 900px;
 .conteudo .sobre .info {
   display: flex;
   /* align-items: center; */
+}
+
+
+/* VOTAÇÃO */
+
+.conteudo .botao{
+  width: 150px;
+  border-radius: 20px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.obs .botao{
+  width: 150px;
+  border-radius: 20px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
 }

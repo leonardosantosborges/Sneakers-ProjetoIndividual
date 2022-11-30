@@ -163,13 +163,13 @@ body {
     animation: modalconteudo .5s;
   }
   
-  .modal .fechar {
-    position: absolute;
-    top:35px;
-    right: 215px;
+  .conteudo .fechar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
   }
   
-  .modal .fechar .botaomodal {
+  .conteudo .fechar .botaomodal {
     width: 30px;
     height: 30px;
     border-radius: 50%;
