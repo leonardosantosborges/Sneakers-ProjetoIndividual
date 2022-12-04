@@ -78,7 +78,7 @@ body {
   height: 400px;
   font-size: 36px;
   justify-content: center;
-  align-items: center;
+  align-items:initial;
 }
 
 /* .tamanho-conteudo { 
@@ -86,11 +86,12 @@ body {
 } */
 
 .banner p {
-  width: 50%;
+  /* border: 2px solid green; */
   margin: 0;
   padding: 0;
-  width: 280px;
+  width: 800px;
   font-size: 36px;
+  text-align: center;
 }
 
 .banner .container span {
@@ -141,6 +142,19 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+/* banner2 */
+
+.banner2{
+  background-repeat: no-repeat;
+  background-image: url(".././assets/imgs/nike-snkrs-pop-up-0.jpg");
+  background-size: cover;
+  width: 99.5%;
+  height: 650px;
+  border: 3px solid red;
+  border-radius: 5px;
+}
+
 
 /* CURIOSIDADES  */
 

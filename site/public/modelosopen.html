@@ -43,7 +43,7 @@
             <p>Obs: Você pode favoritar seus tênis dentro da aba "Ver sobre", todos os tênis favoritados serão listados
                 e você poderá visualiza-los ao clicar em "Ver favoritos".</p>
         </div>
-        <div> <button onclick="iniciaModal()" id="favorito" class="botao">Ver favoritos</button></div>
+        <div> <button onclick="iniciaFavorito()" id="favorito" class="botao">Ver favoritos</button></div>
     </div>
 
 
@@ -107,8 +107,8 @@
 
     <div id="modelo" class="modal">
 
-        
-        
+
+
         <div class="conteudo">
             <div class="fechar">
                 <button id="fecharmodal" class="botaomodal">X</button>
@@ -141,7 +141,7 @@
 
     <div id="airmax" class="modal">
 
-        
+
         <div class="conteudo">
             <div class="fechar">
                 <button id="fecharmodal" class="botaomodal">X</button>
@@ -170,7 +170,7 @@
 
     <div id="af1" class="modal">
 
-        
+
         <div class="conteudo">
             <div class="fechar">
                 <button id="fecharmodal" class="botaomodal">X</button>
@@ -198,7 +198,7 @@
 
     <div id="modelobloq" class="modal">
 
-        
+
         <div class="conteudo">
             <div class="fechar">
                 <button id="fecharmodal" class="botaomodal">X</button>
@@ -222,7 +222,7 @@
 
     <div id="airmax97" class="modal">
 
-        
+
         <div class="conteudo">
             <div class="fechar">
                 <button id="fecharmodal" class="botaomodal">X</button>
@@ -252,7 +252,7 @@
 
     <div id="microbounce" class="modal">
 
-        
+
         <div class="conteudo">
             <div class="fechar">
                 <button id="fecharmodal" class="botaomodal">X</button>
@@ -282,7 +282,7 @@
 
     <div id="desert" class="modal">
 
-        
+
         <div class="conteudo">
             <div class="fechar">
                 <button id="fecharmodal" class="botaomodal">X</button>
@@ -318,7 +318,7 @@
 
             <h2>Lista de Favoritos</h2>
 
-            <div id="mostrar" class="info"></div>
+            <div id="mostrar" class="listafav"></div>
 
         </div>
 
@@ -326,34 +326,105 @@
 
 
 </body>
+
 </html>
 <script>
     var fav = [];
 
+    function iniciaFavorito() {
+        if (fav.length == 0) {
+            alert(`Favorite algum modelo antes!`)
+        } else {
+            function iniciaModal(modalID) {
+                aparecer()
+                const modal = document.getElementById(modalID);
+
+                if (modal) {
+                    modal.classList.add('mostrar')
+                    modal.addEventListener('click', (e) => {
+                        if (e.target.id == 'fecharmodal' || e.target.id == modalID) {
+                            modal.classList.remove('mostrar')
+                        }
+                    });
+                }
+            }
+        }
+    }
+
     function votarmicrobounce() {
-        fav.push(`Adidas Microbounce`);
-        alert(`O modelo foi adicionado a lista de favoritos com sucesso!`)
+        var verificar = false;
+        for (let index = 0; index < fav.length; index++) {
+            if (fav[index] == `Adidas Microbounce`) {
+                alert("Este modelo já foi cadastrado");
+                verificar = true;
+            }
+        } if (verificar == false) {
+            fav.push(`Adidas Microbounce`);
+            alert(`O modelo foi adicionado a lista de favoritos com sucesso!`)
+        }
     } function votardesert() {
-        fav.push(`Mizuno Desert LS`);
-        alert(`O modelo foi adicionado a lista de favoritos com sucesso!`)
+        var verificar = false;
+        for (let index = 0; index < fav.length; index++) {
+            if (fav[index] == `Mizuno Desert LS`) {
+                alert("Este modelo já foi cadastrado");
+                verificar = true;
+            }
+        } if (verificar == false) {
+            fav.push(`Mizuno Desert LS`);
+            alert(`O modelo foi adicionado a lista de favoritos com sucesso!`)
+        }
+        
     } function votaraj11() {
-        fav.push(`Air Jordan 11`);
-        alert(`O modelo foi adicionado a lista de favoritos com sucesso!`)
+        var verificar = false;
+        for (let index = 0; index < fav.length; index++) {
+            if (fav[index] == `Air Jordan 11`) {
+                alert("Este modelo já foi cadastrado");
+                verificar = true;
+            }
+        } if (verificar == false) {
+            fav.push(`Air Jordan 11`);
+            alert(`O modelo foi adicionado a lista de favoritos com sucesso!`)
+        }
     } function votarairmaxplus() {
-        fav.push(`Air Max Plus`);
-        alert(`O modelo foi adicionado a lista de favoritos com sucesso!`)
+        var verificar = false;
+        for (let index = 0; index < fav.length; index++) {
+            if (fav[index] == `Air Max Plus`) {
+                alert("Este modelo já foi cadastrado");
+                verificar = true;
+            }
+        } if (verificar == false) {
+            fav.push(`Air Max Plus`);
+            alert(`O modelo foi adicionado a lista de favoritos com sucesso!`)
+        }
+
     } function votarairmax97() {
-        fav.push(`Air Max 97`);
-        alert(`O modelo foi adicionado a lista de favoritos com sucesso!`)
+        var verificar = false;
+        for (let index = 0; index < fav.length; index++) {
+            if (fav[index] == `Air Max 97`) {
+                alert("Este modelo já foi cadastrado");
+                verificar = true;
+            }
+        } if (verificar == false) {
+            fav.push(`Air Max 97`);
+            alert(`O modelo foi adicionado a lista de favoritos com sucesso!`)
+        }
     } function votaraf1() {
-        fav.push(`Air Force One`);
-        alert(`O modelo foi adicionado a lista de favoritos com sucesso!`)
+        var verificar = false;
+        for (let index = 0; index < fav.length; index++) {
+            if (fav[index] == `Air Force One`) {
+                alert("Este modelo já foi cadastrado");
+                verificar = true;
+            }
+        } if (verificar == false) {
+            fav.push(`Air Force One`);
+            alert(`O modelo foi adicionado a lista de favoritos com sucesso!`)
+        }
     }
 
     function aparecer() {
         mostrar.innerHTML = ``
         for (let index = 0; index < fav.length; index++) {
-            mostrar.innerHTML += `${index+1}° - ${fav[index]} <br>`
+            mostrar.innerHTML += `${index + 1}° - ${fav[index]} <br>`
         }
     }
 
@@ -369,6 +440,10 @@
                     modal.classList.remove('mostrar')
                 }
             });
+
+            const favorito = document.getElementById('favorito')
+            favorito.addEventListener('click', () => iniciaModal('verfavorito'));
+            console.log(favorito)
         }
     }
     // MODAL AJ11
@@ -407,11 +482,6 @@
     const tenisdesert = document.getElementById('tenisdesert')
     tenisdesert.addEventListener('click', () => iniciaModal('desert'));
     console.log(tenisdesert)
-    
-    // FAVORITOS
 
-    const favorito = document.getElementById('favorito')
-    favorito.addEventListener('click', () => iniciaModal('verfavorito'));
-    console.log(favorito)
 
 </script>

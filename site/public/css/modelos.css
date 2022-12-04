@@ -373,6 +373,10 @@ body {
   display: flex;
 }
 
+.modal .conteudo .listafav{
+  font-size: large;
+  font-weight: 600;
+}
 
 /* Animação modal  */
 
